@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"pokee3dcad3d": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
