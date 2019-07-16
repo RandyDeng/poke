@@ -1,5 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
+import { Text, View, Button, TextInput } from 'react-native';
+
+import styles from 'app/constants/Style'
 
 class SignInScreen extends React.Component {
   state = {
@@ -31,14 +33,8 @@ class SignInScreen extends React.Component {
     console.log('user now successfully signed in to the app!!')
   }
 
-  _signInAsync = async () => {
-    await AsyncStorage.setItem('userToken', 'abc');
-    this.props.navigation.navigate('App');
-  };
-
-  _toSignUp = async () => {
-    console.log(this.props.navigation.navigate('Signup'));
-    this.props.navigation.navigate('SignUp');
+  _print = async () => {
+    console.log("Signup!");
   }
 
   render() {
@@ -46,31 +42,32 @@ class SignInScreen extends React.Component {
       <View style={{
         flex: 1,
         flexDirection: 'column',
-        paddingTop: 150
+        paddingTop: 120,
+        alignItems: 'center'
       }}>
-        <View style={{
-          alignItems: 'center'
-        }}>
-          <Text style={{fontSize: 30, paddingBottom: 10}}>Poke Sign In</Text>
+        <View style={styles.container}>
+          <Text style={{fontSize: 30, padding: 10}}>Poke Sign In</Text>
+        </View>
+
+        <View style={styles.container}>
           <TextInput
-            placeholder="Username"
-            style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
-          />
-          <TextInput
-            placeholder="Password"
-            style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
+            placeholder="Enter Username"
+            style={{ height: 50, width: 250, borderColor: '#333', borderWidth: 0, borderBottomWidth: 1 }}
           />
         </View>
 
-        <View style={{
-          paddingTop: 15,
-          justifyContent: 'center',
-          alignContent: 'space-between'
-        }}>
+        <View style={styles.container}>
+          <TextInput
+            placeholder="Enter Password"
+            secureTextEntry={true}
+            style={{ height: 50, width: 250, borderColor: '#333', borderWidth: 0, borderBottomWidth: 1 }}
+          />
+        </View>
+
+        <View style={{paddingTop: 10, height: 50, width: 250}}>
           <Button
             title="Sign In"
-            style={{ width: 100, borderColor: '#333', borderWidth: 1 }}
-            onPress={this.handleSend} />
+            onPress={this._print} />
         </View>
 
         <View style={{
@@ -86,6 +83,7 @@ class SignInScreen extends React.Component {
               Sign Up
           </Text>
         </View>
+
       </View>
     );
   }

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Auth } from 'aws-amplify';
-import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
+import { Text, View, Button, TextInput } from 'react-native';
 
+import styles from 'app/constants/Style'
 
 class SignUpScreen extends React.Component {
     state = {
@@ -47,47 +48,51 @@ class SignUpScreen extends React.Component {
           <View style={{
             flex: 1,
             flexDirection: 'column',
-            paddingTop: 150
+            paddingTop: 120,
+            alignItems: 'center'
           }}>
             <View style={{
               alignItems: 'center'
             }}>
-              <Text style={{fontSize: 30, paddingBottom: 10}}>Poke Sign Up</Text>
-              <TextInput
-                placeholder="Email"
-                onChangeText={(email) => this.setState({email})}
-                value={this.state.email}
-                style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
-              />
-              <TextInput
-                placeholder="Username"
-                onChangeText={(username) => this.setState({username})}
-                value={this.state.username}
-                style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
-              />
-              <TextInput
-                placeholder="Password"
-                onChangeText={(password) => this.setState({password})}
-                value={this.state.password}
-                style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
-              />
+              <View style={styles.container}>
+                <Text style={{fontSize: 30, padding: 10}}>Poke Sign Up</Text>
+              </View>
+
+              <View style={styles.container}>
+                <TextInput
+                  placeholder="Enter Email"
+                  onChangeText={(email) => this.setState({email})}
+                  value={this.state.email}
+                  style={{ height: 50, width: 250, borderColor: '#333', borderWidth: 0, borderBottomWidth: 1 }}
+                />
+              </View>
+
+              <View style={styles.container}>
+                <TextInput
+                  placeholder="Enter Username"
+                  onChangeText={(username) => this.setState({username})}
+                  value={this.state.username}
+                  style={{ height: 50, width: 250, borderColor: '#333', borderWidth: 0, borderBottomWidth: 1 }}
+                />
+              </View>
+      
+              <View style={styles.container}>
+                <TextInput
+                  placeholder="Enter Password"
+                  onChangeText={(password) => this.setState({password})}
+                  value={this.state.password}
+                  secureTextEntry={true}
+                  style={{ height: 50, width: 250, borderColor: '#333', borderWidth: 0, borderBottomWidth: 1 }}
+                />
+              </View>
             </View>
-    
-            <View style={{
-              paddingTop: 15,
-              justifyContent: 'center',
-              alignContent: 'space-between'
-            }}>
+
+            <View style={{paddingTop: 10, height: 50, width: 250}}>
               <Button
-                title="Sign Up"
-                style={{ width: 100, borderColor: '#333', borderWidth: 1 }}
+                title="Register Account"
                 onPress={this._signUp} />
-              <Button
-                title="Print to Console"
-                style={{ width: 100, borderColor: '#333', borderWidth: 1 }}
-                onPress={this._print} />
             </View>
-    
+
             <View style={{
               flexDirection: 'row',
               paddingTop: 20,
@@ -101,6 +106,7 @@ class SignUpScreen extends React.Component {
                   Sign In
               </Text>
             </View>
+
           </View>
         );
       }
