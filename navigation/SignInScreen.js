@@ -10,31 +10,6 @@ class SignInScreen extends React.Component {
     user: {}
   }
 
-  async signUp() {
-    const {
-      username,
-      password,
-      email
-    } = this.state
-    await Auth.signUp({
-      username,
-      password,
-      attributes: {
-        email
-      }
-    })
-    console.log('sign up successful!')
-  }
-
-  async confirmSignUp() {
-    const {
-      username,
-      authCode
-    } = this.state
-    await Auth.configSignignUp(username, authCode)
-    console.log('confirm sign up successful!')
-  }
-
   async signIn() {
     const {
       username,
@@ -61,17 +36,22 @@ class SignInScreen extends React.Component {
     this.props.navigation.navigate('App');
   };
 
+  _toSignUp = async () => {
+    console.log(this.props.navigation.navigate('Signup'));
+    this.props.navigation.navigate('SignUp');
+  }
+
   render() {
     return (
       <View style={{
         flex: 1,
         flexDirection: 'column',
-        paddingTop: 100
+        paddingTop: 150
       }}>
         <View style={{
           alignItems: 'center'
         }}>
-          <Text style={{fontSize: 30}}>Poke</Text>
+          <Text style={{fontSize: 30, paddingBottom: 10}}>Poke Sign In</Text>
           <TextInput
             placeholder="  Username"
             style={{ height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
@@ -83,23 +63,33 @@ class SignInScreen extends React.Component {
         </View>
 
         <View style={{
-          flexDirection: 'row',
           paddingTop: 15,
           justifyContent: 'center',
           alignContent: 'space-between'
         }}>
           <Button
             title="Sign In"
-            style={{ borderColor: '#333', borderWidth: 1 }}
+            style={{ width: 100, borderColor: '#333', borderWidth: 1 }}
             onPress={this.handleSend} />
-          <Button
-            title="Sign Up"
-            style={{ borderColor: '#333', borderWidth: 1 }}
-            onPress={this.handleSend} />
+        </View>
+
+        <View style={{
+          flexDirection: 'row',
+          paddingTop: 20,
+          justifyContent: 'center',
+          alignContent: 'space-between'
+        }}>
+          <Text>Don't have an account?  </Text>
+          <Text
+            style={{color: '#0645AD'}}
+            onPress={() => this.props.navigation.navigate('SignUp')}>
+              Sign Up
+          </Text>
         </View>
       </View>
     );
   }
 }
+
 
 export default SignInScreen
