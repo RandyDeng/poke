@@ -53,12 +53,12 @@ class SignInScreen extends React.Component {
         }}>
           <Text style={{fontSize: 30, paddingBottom: 10}}>Poke Sign In</Text>
           <TextInput
-            placeholder="  Username"
-            style={{ height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
+            placeholder="Username"
+            style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
           />
           <TextInput
-            placeholder="  Password"
-            style={{ height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
+            placeholder="Password"
+            style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
           />
         </View>
 

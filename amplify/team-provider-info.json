@@ -1,18 +1,18 @@
 {
     "pokeenv": {
         "awscloudformation": {
-            "AuthRoleName": "poke-pokeenv-20190710215409-authRole",
-            "UnauthRoleArn": "arn:aws:iam::086053257183:role/poke-pokeenv-20190710215409-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::086053257183:role/poke-pokeenv-20190710215409-authRole",
+            "AuthRoleName": "poke-pokeenv-20190716141640-authRole",
+            "UnauthRoleArn": "arn:aws:iam::086053257183:role/poke-pokeenv-20190716141640-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::086053257183:role/poke-pokeenv-20190716141640-authRole",
             "Region": "us-east-1",
-            "DeploymentBucketName": "poke-pokeenv-20190710215409-deployment",
-            "UnauthRoleName": "poke-pokeenv-20190710215409-unauthRole",
-            "StackName": "poke-pokeenv-20190710215409",
-            "StackId": "arn:aws:cloudformation:us-east-1:086053257183:stack/poke-pokeenv-20190710215409/c66eaea0-a37e-11e9-aa93-12ccfe651680"
+            "DeploymentBucketName": "poke-pokeenv-20190716141640-deployment",
+            "UnauthRoleName": "poke-pokeenv-20190716141640-unauthRole",
+            "StackName": "poke-pokeenv-20190716141640",
+            "StackId": "arn:aws:cloudformation:us-east-1:086053257183:stack/poke-pokeenv-20190716141640/dc2ca410-a7f5-11e9-870d-1253a26d999e"
         },
         "categories": {
             "auth": {
-                "pokee3dcad3d": {}
+                "poke6e546360": {}
             }
         }
     }

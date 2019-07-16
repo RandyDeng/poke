@@ -1,9 +1,9 @@
 {
-    "identityPoolName": "pokee3dcad3d_identitypool_e3dcad3d",
+    "identityPoolName": "poke6e546360_identitypool_6e546360",
     "allowUnauthenticatedIdentities": false,
-    "openIdLambdaRoleName": "pokee3e3dcad3d_openid_lambda_role",
-    "resourceNameTruncated": "pokee3dcad3d",
-    "userPoolName": "pokee3dcad3d_userpool_e3dcad3d",
+    "openIdLambdaRoleName": "poke6e6e546360_openid_lambda_role",
+    "resourceNameTruncated": "poke6e546360",
+    "userPoolName": "poke6e546360_userpool_6e546360",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -21,7 +21,7 @@
     "requiredAttributes": [
         "email"
     ],
-    "userpoolClientName": "pokee3e3dcad3d_app_client",
+    "userpoolClientName": "poke6e6e546360_app_client",
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
@@ -30,10 +30,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "mfaLambdaRole": "pokee3e3dcad3d_totp_lambda_role",
-    "userpoolClientLambdaRole": "pokee3e3dcad3d_userpoolclient_lambda_role",
+    "mfaLambdaRole": "poke6e6e546360_totp_lambda_role",
+    "userpoolClientLambdaRole": "poke6e6e546360_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "pokee3dcad3d",
+    "resourceName": "poke6e546360",
     "authSelections": "identityPoolAndUserPool",
     "authRoleName": {
         "Ref": "AuthRoleName"
@@ -54,14 +54,6 @@
         ]
     },
     "useDefault": "default",
-    "additionalQuestions": [
-        "requiredAttributes",
-        "triggers"
-    ],
-    "triggers": "{}",
-    "parentStack": {
-        "Ref": "AWS::StackId"
-    },
-    "permissions": [],
+    "additionalQuestions": [],
     "dependsOn": []
 }

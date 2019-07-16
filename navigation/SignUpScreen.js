@@ -1,5 +1,5 @@
 import React from 'react';
-import Amplify, { Auth } from 'aws-amplify';
+import { Auth } from 'aws-amplify';
 import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
 
 
@@ -11,8 +11,8 @@ class SignUpScreen extends React.Component {
       authCode: '',
       user: {}
     }
-  
-    async signUp() {
+
+    _signUp = async () => {
       const {
         username,
         password,
@@ -36,6 +36,11 @@ class SignUpScreen extends React.Component {
       await Auth.configSignignUp(username, authCode)
       console.log('confirm sign up successful!')
     }
+
+    _print = async () => {
+      console.log(this.state);
+      console.log(this.state.username)
+    }
   
     render() {
         return (
@@ -49,16 +54,22 @@ class SignUpScreen extends React.Component {
             }}>
               <Text style={{fontSize: 30, paddingBottom: 10}}>Poke Sign Up</Text>
               <TextInput
-                placeholder="  Email"
-                style={{ height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
+                placeholder="Email"
+                onChangeText={(email) => this.setState({email})}
+                value={this.state.email}
+                style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
               />
               <TextInput
-                placeholder="  Username"
-                style={{ height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
+                placeholder="Username"
+                onChangeText={(username) => this.setState({username})}
+                value={this.state.username}
+                style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
               />
               <TextInput
-                placeholder="  Password"
-                style={{ height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
+                placeholder="Password"
+                onChangeText={(password) => this.setState({password})}
+                value={this.state.password}
+                style={{ paddingLeft: 5, height: 40, width: 250, borderColor: '#333', borderWidth: 1 }}
               />
             </View>
     
@@ -70,7 +81,11 @@ class SignUpScreen extends React.Component {
               <Button
                 title="Sign Up"
                 style={{ width: 100, borderColor: '#333', borderWidth: 1 }}
-                onPress={this.handleSend} />
+                onPress={this._signUp} />
+              <Button
+                title="Print to Console"
+                style={{ width: 100, borderColor: '#333', borderWidth: 1 }}
+                onPress={this._print} />
             </View>
     
             <View style={{

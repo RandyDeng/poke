@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"pokee3dcad3d": {
+		"poke6e546360": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []
