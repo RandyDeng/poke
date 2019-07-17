@@ -1,19 +1,22 @@
 import { createSwitchNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
 
 import MainTabNavigator from './MainTabNavigator';
-import SignInScreen from 'app/screens/SignInScreen';
-import SignUpScreen from 'app/screens/SignUpScreen';
-import AuthLoadingScreen from 'app/screens/AuthLoading'
+
+import AuthLoadingScreen from 'app/auth/AuthLoading';
+import SignInScreen from 'app/auth/SignInScreen';
+import SignUpScreen from 'app/auth/SignUpScreen';
+import ConfirmSignUp from 'app/auth/ConfirmSignUp';
 
 
 export default createAppContainer(createSwitchNavigator(
   {
     AuthLoading: AuthLoadingScreen,
     App: createStackNavigator({ Home: MainTabNavigator }),
-    SignIn: SignInScreen ,
+    SignIn: SignInScreen,
     SignUp: SignUpScreen,
+    ConfirmSignUp: ConfirmSignUp
   },
   {
-    initialRouteName: 'AuthLoading',
+    initialRouteName: 'SignIn',
   }
 ));

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Auth } from 'aws-amplify';
 import { Text, View, Button, TextInput } from 'react-native';
 
 import styles from 'app/constants/Style'
@@ -12,7 +13,7 @@ class SignInScreen extends React.Component {
     user: {}
   }
 
-  async signIn() {
+  _signIn = async () => {
     const {
       username,
       password
@@ -22,19 +23,7 @@ class SignInScreen extends React.Component {
       user
     })
     console.log('sign in successful!')
-  }
-
-  async confirmSignIn() {
-    const {
-      user,
-      authCode
-    } = this.state
-    await Auth.configSignignIn(user, authCode)
-    console.log('user now successfully signed in to the app!!')
-  }
-
-  _print = async () => {
-    console.log("Signup!");
+    this.props.navigation.navigate('App')
   }
 
   render() {
@@ -52,6 +41,8 @@ class SignInScreen extends React.Component {
         <View style={styles.container}>
           <TextInput
             placeholder="Enter Username"
+            onChangeText={(username) => this.setState({username})}
+            value={this.state.username}
             style={{ height: 50, width: 250, borderColor: '#333', borderWidth: 0, borderBottomWidth: 1 }}
           />
         </View>
@@ -59,6 +50,8 @@ class SignInScreen extends React.Component {
         <View style={styles.container}>
           <TextInput
             placeholder="Enter Password"
+            onChangeText={(password) => this.setState({password})}
+            value={this.state.password}
             secureTextEntry={true}
             style={{ height: 50, width: 250, borderColor: '#333', borderWidth: 0, borderBottomWidth: 1 }}
           />
@@ -67,7 +60,7 @@ class SignInScreen extends React.Component {
         <View style={{paddingTop: 10, height: 50, width: 250}}>
           <Button
             title="Sign In"
-            onPress={this._print} />
+            onPress={this._signIn} />
         </View>
 
         <View style={{

@@ -9,8 +9,6 @@ class SignUpScreen extends React.Component {
       username: '',
       password: '',
       email: '',
-      authCode: '',
-      user: {}
     }
 
     _signUp = async () => {
@@ -26,21 +24,8 @@ class SignUpScreen extends React.Component {
           email
         }
       })
-      console.log('sign up successful!')
-    }
-  
-    async confirmSignUp() {
-      const {
-        username,
-        authCode
-      } = this.state
-      await Auth.configSignignUp(username, authCode)
-      console.log('confirm sign up successful!')
-    }
-
-    _print = async () => {
-      console.log(this.state);
-      console.log(this.state.username)
+      console.log('User signed up successfully!')
+      this.props.navigation.navigate('ConfirmSignUp', {'username': this.state.username})
     }
   
     render() {
