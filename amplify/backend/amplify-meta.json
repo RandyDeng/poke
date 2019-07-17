@@ -1,0 +1,42 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "poke-pokeenv-20190716141640-authRole",
+			"UnauthRoleArn": "arn:aws:iam::086053257183:role/poke-pokeenv-20190716141640-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::086053257183:role/poke-pokeenv-20190716141640-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "poke-pokeenv-20190716141640-deployment",
+			"UnauthRoleName": "poke-pokeenv-20190716141640-unauthRole",
+			"StackName": "poke-pokeenv-20190716141640",
+			"StackId": "arn:aws:cloudformation:us-east-1:086053257183:stack/poke-pokeenv-20190716141640/dc2ca410-a7f5-11e9-870d-1253a26d999e"
+		}
+	},
+	"auth": {
+		"poke6e546360": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/auth/poke6e546360-cloudformation-template.yml",
+				"logicalId": "authpoke6e546360"
+			},
+			"lastPushTimeStamp": "2019-07-16T18:20:36.677Z",
+			"output": {
+				"AppClientSecret": "ovgf828pmut1re0gooula1d4vo0pmtff53ieuq8dru3eualc2vs",
+				"UserPoolId": "us-east-1_ypOh92JFT",
+				"AppClientIDWeb": "39h87lem060r0nb08eemqqkf6i",
+				"AppClientID": "3sqe6ma6jbie7f3rce9ef1jp8t",
+				"IdentityPoolId": "us-east-1:dc80d96c-a294-44d0-a6f4-2f32904ec584",
+				"IdentityPoolName": "poke6e546360_identitypool_6e546360__pokeenv",
+				"UserPoolName": "poke6e546360_userpool_6e546360"
+			},
+			"lastPushDirHash": "SW50hDR9xdUl6/kFVDNG84P/iyg="
+		}
+	},
+	"storage": {
+		"poke": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

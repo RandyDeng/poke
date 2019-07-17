@@ -1,0 +1,7 @@
+{
+    "pokeenv": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "poke-randy"
+    }
+}

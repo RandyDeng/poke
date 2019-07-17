@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"poke6e546360": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
