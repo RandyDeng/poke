@@ -133,6 +133,18 @@
 					"env": "pokeenv"
 				}
 			}
+		},
+		"storagepoke": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/storage/poke-cloudformation-template.json",
+				"Parameters": {
+					"tableName": "poke",
+					"partitionKeyName": "username",
+					"partitionKeyType": "S",
+					"env": "pokeenv"
+				}
+			}
 		}
 	},
 	"Outputs": {

@@ -20,7 +20,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/auth/poke6e546360-cloudformation-template.yml",
 				"logicalId": "authpoke6e546360"
 			},
-			"lastPushTimeStamp": "2019-07-16T18:20:36.677Z",
+			"lastPushTimeStamp": "2019-07-17T23:42:11.568Z",
 			"output": {
 				"AppClientSecret": "ovgf828pmut1re0gooula1d4vo0pmtff53ieuq8dru3eualc2vs",
 				"UserPoolId": "us-east-1_ypOh92JFT",
@@ -31,6 +31,26 @@
 				"UserPoolName": "poke6e546360_userpool_6e546360"
 			},
 			"lastPushDirHash": "SW50hDR9xdUl6/kFVDNG84P/iyg="
+		}
+	},
+	"storage": {
+		"poke": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/storage/poke-cloudformation-template.json",
+				"logicalId": "storagepoke"
+			},
+			"lastPushTimeStamp": "2019-07-17T23:42:11.574Z",
+			"output": {
+				"PartitionKeyName": "username",
+				"Region": "us-east-1",
+				"Arn": "arn:aws:dynamodb:us-east-1:086053257183:table/poke-pokeenv",
+				"StreamArn": "arn:aws:dynamodb:us-east-1:086053257183:table/poke-pokeenv/stream/2019-07-17T23:41:19.883",
+				"PartitionKeyType": "S",
+				"Name": "poke-pokeenv"
+			},
+			"lastPushDirHash": "bxmCHmEsN5JN5tqNMk7KFsTPGJc="
 		}
 	}
 }

@@ -1,0 +1,5 @@
+{
+    "tableName": "poke",
+    "partitionKeyName": "username",
+    "partitionKeyType": "S"
+}
