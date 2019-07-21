@@ -6,6 +6,7 @@ import AuthLoadingScreen from 'app/auth/AuthLoading';
 import SignInScreen from 'app/auth/SignInScreen';
 import SignUpScreen from 'app/auth/SignUpScreen';
 import ConfirmSignUp from 'app/auth/ConfirmSignUp';
+import PokeScreen from 'app/screens/PokeScreen';
 
 
 export default createAppContainer(createSwitchNavigator(
@@ -14,9 +15,10 @@ export default createAppContainer(createSwitchNavigator(
     App: createStackNavigator({ Home: MainTabNavigator }),
     SignIn: SignInScreen,
     SignUp: SignUpScreen,
-    ConfirmSignUp: ConfirmSignUp
+    ConfirmSignUp: ConfirmSignUp,
+    PokeScreen: PokeScreen
   },
   {
-    initialRouteName: 'SignIn',
+    initialRouteName: 'App',
   }
 ));
