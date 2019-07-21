@@ -1,6 +1,11 @@
 import React from 'react';
 import { Auth } from 'aws-amplify';
-import { Text, View, Button, TextInput } from 'react-native';
+import {
+  Text,
+  View,
+  Button,
+  TextInput,
+} from 'react-native';
 
 import styles from 'app/constants/Style'
 

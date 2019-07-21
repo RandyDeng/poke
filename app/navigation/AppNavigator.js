@@ -19,6 +19,6 @@ export default createAppContainer(createSwitchNavigator(
     PokeScreen: PokeScreen
   },
   {
-    initialRouteName: 'App',
+    initialRouteName: 'PokeScreen',
   }
 ));

@@ -37,6 +37,12 @@ export default StyleSheet.create({
     },
     fullScreen: {
         width: width,
-        height: height
+        backgroundColor: 'powderblue'
+    },
+    sendPokes: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'stretch',
+        backgroundColor: 'steelblue'
     }
 })

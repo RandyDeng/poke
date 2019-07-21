@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Button,
   Text,
+  TouchableHighlight,
   View,
 } from 'react-native';
 
@@ -23,12 +24,13 @@ export default class HomeScreen extends React.Component {
         <View style={styles.container}>
           <Text style={{fontSize: 30, padding: 10}}>Welcome. Start Poking!</Text>
         </View>
-
-        <View style={{height: 50, width: 250}}>
-          <Button
-            title="Poke your friends!"
-            onPress={() => {this.props.navigation.navigate('PokeScreen')}} />
-        </View>
+        <TouchableHighlight>
+          <View style={{height: 50, width: 250}}>
+            <Button
+              title="Poke your friends!"
+              onPress={() => {this.props.navigation.navigate('PokeScreen')}} />
+          </View>
+        </TouchableHighlight>
 
       </View>
     );
