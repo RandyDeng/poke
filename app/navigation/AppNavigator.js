@@ -7,6 +7,8 @@ import SignInScreen from 'app/auth/SignInScreen';
 import SignUpScreen from 'app/auth/SignUpScreen';
 import ConfirmSignUp from 'app/auth/ConfirmSignUp';
 import PokeScreen from 'app/screens/PokeScreen';
+import SendPokes from 'app/screens/SendPokes';
+import ViewPokes from 'app/screens/ViewPokes';
 
 
 export default createAppContainer(createSwitchNavigator(
@@ -16,9 +18,11 @@ export default createAppContainer(createSwitchNavigator(
     SignIn: SignInScreen,
     SignUp: SignUpScreen,
     ConfirmSignUp: ConfirmSignUp,
-    PokeScreen: PokeScreen
+    PokeScreen: PokeScreen,
+    SendPokes: SendPokes,
+    ViewPokes: ViewPokes
   },
   {
-    initialRouteName: 'PokeScreen',
+    initialRouteName: 'App',
   }
 ));

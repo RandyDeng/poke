@@ -13,6 +13,13 @@ const awsmobile = {
             "tableName": "poke-pokeenv",
             "region": "us-east-1"
         }
+    ],
+    "aws_cloud_logic_custom": [
+        {
+            "name": "pokeapi",
+            "endpoint": "https://r722y4dpsa.execute-api.us-east-1.amazonaws.com/pokeenv",
+            "region": "us-east-1"
+        }
     ]
 };
 

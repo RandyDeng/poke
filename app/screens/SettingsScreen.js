@@ -27,12 +27,6 @@ export default class SettingsScreen extends React.Component {
     this.props.navigation.navigate('SignIn')
   };
 
-  _p = async () => {
-    user2 = await Auth.currentAuthenticatedUser()
-    console.log(this.user);
-    console.log(user2);
-  };
-
   render() {
     return (
       <ScrollView style={styles.scroll}>
@@ -42,41 +36,7 @@ export default class SettingsScreen extends React.Component {
           background={Touchable.Ripple('#ccc', false)}>
           <View style={{ flexDirection: 'row' }}>
             <View style={styles.optionTextContainer}>
-              <Text style={styles.optionText}>Username: 
-              { this.state && this.state.user &&
-                <Text>{ this.user.username }</Text>
-              }
-              </Text>
-            </View>
-          </View>
-        </Touchable>
-
-        <Touchable
-          style={styles.option}
-          background={Touchable.Ripple('#ccc', false)}>
-          <View style={{ flexDirection: 'row' }}>
-            <View style={styles.optionTextContainer}>
-              <Text style={styles.optionText}>Email: </Text>
-            </View>
-          </View>
-        </Touchable>
-
-        <Touchable
-          style={styles.option}
-          background={Touchable.Ripple('#ccc', false)}>
-          <View style={{ flexDirection: 'row' }}>
-            <View style={styles.optionTextContainer}>
               <Button title="Sign Out" onPress={this._signOut} />
-            </View>
-          </View>
-        </Touchable>
-
-        <Touchable
-          style={styles.option}
-          background={Touchable.Ripple('#ccc', false)}>
-          <View style={{ flexDirection: 'row' }}>
-            <View style={styles.optionTextContainer}>
-              <Button title="Debug" onPress={this._p} />
             </View>
           </View>
         </Touchable>

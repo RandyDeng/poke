@@ -145,6 +145,54 @@
 					"env": "pokeenv"
 				}
 			}
+		},
+		"functionpokeapi": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/function/pokeapi-cloudformation-template.json",
+				"Parameters": {
+					"storagepokeName": {
+						"Fn::GetAtt": [
+							"storagepoke",
+							"Outputs.Name"
+						]
+					},
+					"storagepokeArn": {
+						"Fn::GetAtt": [
+							"storagepoke",
+							"Outputs.Arn"
+						]
+					},
+					"env": "pokeenv"
+				}
+			}
+		},
+		"apipokeapi": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/api/pokeapi-cloudformation-template.json",
+				"Parameters": {
+					"authRoleName": {
+						"Ref": "AuthRoleName"
+					},
+					"unauthRoleName": {
+						"Ref": "UnauthRoleName"
+					},
+					"functionpokeapiName": {
+						"Fn::GetAtt": [
+							"functionpokeapi",
+							"Outputs.Name"
+						]
+					},
+					"functionpokeapiArn": {
+						"Fn::GetAtt": [
+							"functionpokeapi",
+							"Outputs.Arn"
+						]
+					},
+					"env": "pokeenv"
+				}
+			}
 		}
 	},
 	"Outputs": {

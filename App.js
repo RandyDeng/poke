@@ -4,10 +4,10 @@ import { AppLoading, Asset, Font, Icon } from 'expo';
 
 import AppNavigator from 'app/navigation/AppNavigator';
 
-import Auth from '@aws-amplify/auth';
+import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 
-Auth.configure(awsconfig);
+Amplify.configure(awsconfig);
 
 export default class App extends React.Component {
   state = {

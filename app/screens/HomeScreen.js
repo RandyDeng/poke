@@ -24,11 +24,20 @@ export default class HomeScreen extends React.Component {
         <View style={styles.container}>
           <Text style={{fontSize: 30, padding: 10}}>Welcome. Start Poking!</Text>
         </View>
+
         <TouchableHighlight>
           <View style={{height: 50, width: 250}}>
             <Button
               title="Poke your friends!"
               onPress={() => {this.props.navigation.navigate('PokeScreen')}} />
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight>
+          <View style={{height: 50, width: 250}}>
+            <Button
+              title="View pokes"
+              onPress={() => {this.props.navigation.navigate('ViewPokes')}} />
           </View>
         </TouchableHighlight>
 
