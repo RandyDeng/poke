@@ -23,6 +23,6 @@ export default createAppContainer(createSwitchNavigator(
     ViewPokes: ViewPokes
   },
   {
-    initialRouteName: 'App',
+    initialRouteName: 'SignIn',
   }
 ));
