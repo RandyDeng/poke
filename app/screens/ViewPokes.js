@@ -34,12 +34,21 @@ export default class ViewPokes extends React.Component {
     }
 
     async getData() {
-        const path = "/items";
+        let user = await Auth.currentAuthenticatedUser();
+        user = user.username;
+        const path = "/items/" + user;
 
         try {
-          const apiResponse = await API.get("pokeapi", path);
-          console.log("response from getting note: " + apiResponse);
-          this.setState({apiResponse});
+            // get the data
+            const apiResponse = await API.get("apia6ac92aa", path);
+
+            // play the animation
+            let delay = 0
+            for (i = 0; i < apiResponse[0].data.length; i++) {
+                delay = apiResponse[0].data[i].timestamp - apiResponse[0].data[0].timestamp
+
+                setTimeout(this.onPressedIn, delay, apiResponse[0].data[i].centerX, apiResponse[0].data[i].centerY)
+            }
         } catch (e) {
           console.log(e);
         }

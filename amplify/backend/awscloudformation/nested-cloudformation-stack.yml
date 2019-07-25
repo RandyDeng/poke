@@ -146,10 +146,10 @@
 				}
 			}
 		},
-		"functionpokeapi": {
+		"functionpokelambda": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/function/pokeapi-cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/function/pokelambda-cloudformation-template.json",
 				"Parameters": {
 					"storagepokeName": {
 						"Fn::GetAtt": [
@@ -167,10 +167,10 @@
 				}
 			}
 		},
-		"apipokeapi": {
+		"apiapia6ac92aa": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/api/pokeapi-cloudformation-template.json",
+				"TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/api/apia6ac92aa-cloudformation-template.json",
 				"Parameters": {
 					"authRoleName": {
 						"Ref": "AuthRoleName"
@@ -178,15 +178,15 @@
 					"unauthRoleName": {
 						"Ref": "UnauthRoleName"
 					},
-					"functionpokeapiName": {
+					"functionpokelambdaName": {
 						"Fn::GetAtt": [
-							"functionpokeapi",
+							"functionpokelambda",
 							"Outputs.Name"
 						]
 					},
-					"functionpokeapiArn": {
+					"functionpokelambdaArn": {
 						"Fn::GetAtt": [
-							"functionpokeapi",
+							"functionpokelambda",
 							"Outputs.Arn"
 						]
 					},

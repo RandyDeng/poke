@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "pokelambda",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "apia6ac92aa",
+    "apiName": "apia6ac92aa",
+    "functionArns": [
+        {
+            "lambdaFunction": "pokelambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "poke-pokeenv-20190716141640-authRole",
+        "unAuthRoleName": "poke-pokeenv-20190716141640-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "pokelambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

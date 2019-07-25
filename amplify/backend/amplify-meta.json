@@ -20,7 +20,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/auth/poke6e546360-cloudformation-template.yml",
 				"logicalId": "authpoke6e546360"
 			},
-			"lastPushTimeStamp": "2019-07-24T04:00:40.454Z",
+			"lastPushTimeStamp": "2019-07-24T23:45:51.339Z",
 			"output": {
 				"AppClientSecret": "ovgf828pmut1re0gooula1d4vo0pmtff53ieuq8dru3eualc2vs",
 				"UserPoolId": "us-east-1_ypOh92JFT",
@@ -41,7 +41,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/storage/poke-cloudformation-template.json",
 				"logicalId": "storagepoke"
 			},
-			"lastPushTimeStamp": "2019-07-24T04:00:40.454Z",
+			"lastPushTimeStamp": "2019-07-24T23:45:51.340Z",
 			"output": {
 				"PartitionKeyName": "username",
 				"Region": "us-east-1",
@@ -54,7 +54,7 @@
 		}
 	},
 	"function": {
-		"pokeapi": {
+		"pokelambda": {
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true,
@@ -68,31 +68,31 @@
 					]
 				}
 			],
-			"lastBuildTimeStamp": "2019-07-24T03:58:56.466Z",
-			"lastPackageTimeStamp": "2019-07-24T03:59:01.996Z",
-			"distZipFilename": "pokeapi-59786b696a39662f5273-build.zip",
+			"lastBuildTimeStamp": "2019-07-24T23:43:38.341Z",
+			"lastPackageTimeStamp": "2019-07-24T23:43:43.011Z",
+			"distZipFilename": "pokelambda-3973584e766670416450-build.zip",
 			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/function/pokeapi-cloudformation-template.json",
-				"logicalId": "functionpokeapi"
+				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/function/pokelambda-cloudformation-template.json",
+				"logicalId": "functionpokelambda"
 			},
-			"lastPushTimeStamp": "2019-07-24T04:00:40.462Z",
+			"lastPushTimeStamp": "2019-07-24T23:45:51.347Z",
 			"output": {
 				"Region": "us-east-1",
-				"Arn": "arn:aws:lambda:us-east-1:086053257183:function:pokeapi-pokeenv",
-				"Name": "pokeapi-pokeenv",
-				"LambdaExecutionRole": "pokeLambdaRole47190300-pokeenv"
+				"Arn": "arn:aws:lambda:us-east-1:086053257183:function:pokelambdaname-pokeenv",
+				"Name": "pokelambdaname-pokeenv",
+				"LambdaExecutionRole": "pokeLambdaRolea33b5936-pokeenv"
 			},
-			"lastPushDirHash": "dXKbx8oMatZl4AC1xRMcszl83R8="
+			"lastPushDirHash": "NE1Z+N4vDZgo6BjfasHJcKOKU7I="
 		}
 	},
 	"api": {
-		"pokeapi": {
+		"apia6ac92aa": {
 			"service": "API Gateway",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "pokeapi",
+					"resourceName": "pokelambda",
 					"attributes": [
 						"Name",
 						"Arn"
@@ -100,15 +100,15 @@
 				}
 			],
 			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/api/pokeapi-cloudformation-template.json",
-				"logicalId": "apipokeapi"
+				"s3TemplateURL": "https://s3.amazonaws.com/poke-pokeenv-20190716141640-deployment/amplify-cfn-templates/api/apia6ac92aa-cloudformation-template.json",
+				"logicalId": "apiapia6ac92aa"
 			},
-			"lastPushTimeStamp": "2019-07-24T04:00:40.462Z",
+			"lastPushTimeStamp": "2019-07-24T23:45:51.347Z",
 			"output": {
-				"ApiName": "pokeapi",
-				"RootUrl": "https://r722y4dpsa.execute-api.us-east-1.amazonaws.com/pokeenv"
+				"ApiName": "apia6ac92aa",
+				"RootUrl": "https://gc6egy94dg.execute-api.us-east-1.amazonaws.com/pokeenv"
 			},
-			"lastPushDirHash": "Oe5oKU9z8HiojHaYLrFg+W7omuE="
+			"lastPushDirHash": "bU2uS1gqonu31CAX4G9hjAEtJKI="
 		}
 	}
 }

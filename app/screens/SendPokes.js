@@ -10,8 +10,6 @@ class SendPokes extends React.Component {
   }
 
   _sendPokes = async () => {
-    console.log(this.props.navigation.state.params.pokes)
-    console.log(this.state.username)
     let newNote = {
       body: {
         username: this.state.username,
@@ -22,8 +20,7 @@ class SendPokes extends React.Component {
 
     // Use the API module to save the note to the database
     try {
-      const apiResponse = await API.put("pokeapi", path, newNote)
-      console.log("response from saving note: " + apiResponse);
+      const apiResponse = await API.put("apia6ac92aa", path, newNote)
       this.setState({apiResponse});
     } catch (e) {
       console.log(e);

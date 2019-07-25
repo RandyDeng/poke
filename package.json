@@ -11,7 +11,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@aws-amplify/cli": "^1.8.1",
+    "@aws-amplify/cli": "^1.8.5",
     "@expo/samples": "2.1.1",
     "aws-amplify": "^1.1.30",
     "aws-amplify-react-native": "^2.1.14",
